@@ -1,11 +1,21 @@
 ---
+// this section is called formatter
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
+const name = 'Miriam';
+// this section executes only at Build Time
+// the body of astro executes at run time
+
 ---
+
+<script>
+  console.log('hello');
+</script>
+
 
 <Layout title="Welcome to Astro.">
 	<main>
-		<h1>Welcome to <span class="text-gradient">Astro</span></h1>
+		<h1>Welcome to <span class="text-gradient">Astro, {name}!</span></h1>
 		<p class="instructions">
 			To get started, open the directory <code>src/pages</code> in your project.<br />
 			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
